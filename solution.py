@@ -18,4 +18,4 @@ def solution(x: np.array) -> bool: # Одна или две выборке на 
     t_statistic, p_value = ttest_1samp(costs, threshold)
 
     # проверяем гипотезу на уровне значимости alpha
-    return(p_value < alpha and t_statistic < 0)
+    return(p_value/2 < alpha and t_statistic < 0)
